@@ -1,1 +1,122 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok Publishing App - eMobile Indonesia</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:780px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.8em}h2{font-size:1.2em;margin-top:1.6em}.id{background:#f3f6f9;border-left:4px solid #2b7a4b;padding:12px 16px;margin:16px 0}footer{margin-top:40px;font-size:.9em;color:#666}a{color:#2b7a4b}</style></head><body><h1>eMobile Indonesia &ndash; TikTok Publishing App</h1><p>A personal tool by Antonius Junaidi (eMobile Indonesia, Indonesia) for posting our own videos to our own TikTok account.</p><ul><li><a href="terms.html">Terms of Service</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul><footer>&copy; 2026 eMobile Indonesia &middot; <a href="index.html">Home</a> &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kebun Hidroponik Uploader</title>
+<meta name="description" content="Kebun Hidroponik Uploader: post my own gardening, hydroponic and slow living videos to my TikTok account after I approve each post.">
+<style>
+:root{--green:#2f6b3a;--green2:#4c9a5a;--leaf:#8cc084;--cream:#fbf6ea;--card:#fffdf7;--ink:#2a2a22;--muted:#6b6a5c}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+header{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:28px 20px 34px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;align-items:center;gap:16px}
+header svg{flex:0 0 56px}
+header h1{margin:0;font-size:1.7em;line-height:1.2}
+header p{margin:4px 0 0;opacity:.9}
+main{padding:24px 0 10px}
+.card{background:var(--card);border:1px solid #e6dfcb;border-radius:16px;padding:22px;margin:0 0 22px;box-shadow:0 2px 8px rgba(60,50,20,.06)}
+h2{margin:0 0 10px;font-size:1.25em;color:var(--green)}
+ul{padding-left:20px;margin:8px 0}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 22px;font-size:1em;font-weight:600;cursor:pointer;text-decoration:none}
+.btn-login{background:#222;color:#fff}
+.btn-login:hover{background:#000}
+.btn-post{background:var(--green);color:#fff}
+.btn-post:hover{background:#245530}
+label{display:block;font-weight:600;margin:14px 0 6px}
+input[type=file],textarea,select{width:100%;font:inherit;padding:10px 12px;border:1px solid #d8cfb5;border-radius:10px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+.check{display:flex;align-items:center;gap:10px;font-weight:600;margin:16px 0}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.msg{margin-top:14px;padding:12px 14px;border-radius:10px;display:none}
+.msg.err{display:block;background:#fff3e0;border:1px solid #f0c27a;color:#7a4b00}
+.msg.ok{display:block;background:#e9f5ea;border:1px solid #9fcca4;color:#1f5a2a}
+.small{font-size:.9em;color:var(--muted)}
+footer{border-top:1px solid #e6dfcb;padding:20px 0 30px;font-size:.92em;color:var(--muted)}
+footer a,main a{color:var(--green)}
+@media(max-width:520px){header h1{font-size:1.35em}.btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <svg width="56" height="56" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#fbf6ea"/><path d="M32 52V28" stroke="#2f6b3a" stroke-width="3" stroke-linecap="round"/><path d="M32 34C20 34 14 24 15 14c10 0 18 6 17 20z" fill="#4c9a5a"/><path d="M32 30c0-12 8-18 18-17 0 11-7 18-18 17z" fill="#8cc084"/><rect x="20" y="46" width="24" height="10" rx="3" fill="#b5835a"/></svg>
+    <div>
+      <h1>Kebun Hidroponik Uploader</h1>
+      <p>Gardening &middot; Hydroponics &middot; Slow living</p>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="card" id="about">
+    <h2>&#127793; About this app</h2>
+    <p>Kebun Hidroponik Uploader is a personal tool used only by its owner, Antonius Junaidi (eMobile Indonesia), to post short videos he creates about home gardening, hydroponics (pakcoy, melon and other vegetables) and slow living to his own TikTok account.</p>
+    <ul>
+      <li><strong>Login Kit</strong> (<code>user.info.basic</code>): signs in the owner's TikTok account.</li>
+      <li><strong>Content Posting API</strong> (<code>video.upload</code>, <code>video.publish</code>): uploads and publishes the owner's finished videos.</li>
+      <li>Nothing is posted until the owner explicitly approves each post.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="login">
+    <h2>&#128273; Step 1: Connect your account</h2>
+    <p>Sign in with your TikTok account to allow this app to post your gardening videos.</p>
+    <button class="btn btn-login" id="loginBtn" type="button">Login with TikTok</button>
+    <p class="small">You will be redirected to TikTok to review and approve the requested permissions.</p>
+  </section>
+
+  <section class="card" id="post">
+    <h2>&#127909; Step 2: Post a video</h2>
+    <form id="postForm" novalidate>
+      <label for="video">Video file</label>
+      <input type="file" id="video" accept="video/*">
+      <label for="caption">Caption</label>
+      <textarea id="caption" maxlength="2200" placeholder="e.g. Panen pakcoy hidroponik di halaman rumah #hidroponik #berkebun"></textarea>
+      <label for="privacy">Who can view this video</label>
+      <select id="privacy">
+        <option value="PUBLIC_TO_EVERYONE">Public</option>
+        <option value="MUTUAL_FOLLOW_FRIENDS">Friends</option>
+        <option value="SELF_ONLY">Only me</option>
+      </select>
+      <label class="check"><input type="checkbox" id="approve"> I approve this post</label>
+      <button class="btn btn-post" type="submit">Post</button>
+      <div class="msg" id="msg" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+<footer>
+  <div class="wrap">&copy; 2026 eMobile Indonesia &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a></div>
+</footer>
+<script>
+// Fill in your TikTok app Client Key here.
+const CLIENT_KEY = 'YOUR_CLIENT_KEY';
+const REDIRECT_URI = 'https://backend.composio.dev/api/v1/auth-apps/add';
+const SCOPES = 'user.info.basic,video.upload,video.publish';
+
+document.getElementById('loginBtn').addEventListener('click', function () {
+  const url = 'https://www.tiktok.com/v2/auth/authorize/'
+    + '?client_key=' + encodeURIComponent(CLIENT_KEY)
+    + '&response_type=code'
+    + '&scope=' + SCOPES
+    + '&redirect_uri=' + encodeURIComponent(REDIRECT_URI)
+    + '&state=demo';
+  window.location.href = url;
+});
+
+document.getElementById('postForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const msg = document.getElementById('msg');
+  const file = document.getElementById('video').files[0];
+  const approved = document.getElementById('approve').checked;
+  const privacy = document.getElementById('privacy');
+  if (!file) { msg.className = 'msg err'; msg.textContent = 'Please choose a video file to post first.'; return; }
+  if (!approved) { msg.className = 'msg err'; msg.textContent = 'Please tick "I approve this post" before posting.'; return; }
+  const mb = (file.size / 1048576).toFixed(1);
+  msg.className = 'msg ok';
+  msg.textContent = '\u2705 "' + file.name + '" (' + mb + ' MB, ' + privacy.options[privacy.selectedIndex].text
+    + ') is queued for posting to your TikTok account through the owner\'s backend.';
+});
+</script>
+</body>
+</html>
